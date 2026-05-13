@@ -1,0 +1,15 @@
+{
+  "name": "anphuni-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rhythm Reactions CIC MVP pipeline app",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "mvp:handoff": "node scripts/generate-handoff.mjs",
+    "mvp:server": "node src/server.mjs",
+    "mvp:loop": "node scripts/run-loop.mjs"
+  }
+}

@@ -1,0 +1,8 @@
+# Runtime state and local test artifacts
+data/state.json
+data/cookie*.txt
+artifacts/*.json
+artifacts/*.log
+
+# Node modules
+node_modules/
