@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: anphuni-mvp
+    runtime: node
+    plan: starter
+    branch: main
+    buildCommand: npm install
+    startCommand: npm run mvp:server
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: anphuni-data
+      mountPath: /var/data
+      sizeGB: 1

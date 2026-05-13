@@ -1,7 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const DATA_DIR = path.resolve(process.cwd(), "data");
+const DATA_DIR = process.env.DATA_DIR
+    ? path.resolve(process.env.DATA_DIR)
+    : path.resolve(process.cwd(), "data");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
 
 function withDefaults(state) {
